@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+  @category    Instictools
+  @package     Instictools_DownloableLink
+  @copyright   Copyright (c)
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Downloadable\Model\Link" type="Instictools\DownloableLink\Model\Link" />
+    <preference for="Magento\Downloadable\Model\LinkRepository" type="Instictools\DownloableLink\Model\LinkRepository" />
+    <type name="Magento\Downloadable\Ui\DataProvider\Product\Form\Modifier\Links">
+        <plugin disabled="false" name="ProcessGuestRegister"
+                type="Instictools\DownloableLink\Plugin\Ui\DataProvider\Product\Form\Modifier\Links"/>
+    </type>
+    <type name="Magento\Downloadable\Ui\DataProvider\Product\Form\Modifier\Data\Links">
+        <plugin disabled="false" name="ProcessGuestRegister"
+                type="Instictools\DownloableLink\Plugin\Ui\DataProvider\Product\Form\Modifier\Data\Links"/>
+    </type>
+</config>
